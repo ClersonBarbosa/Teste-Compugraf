@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Nova Pessoa";
+}
+<div class="jumbotron" >
+    <h2><span id="lbl_titulo"></span></h2>
+
+
+    <section class="content">
+        <div class="row">
+            <div class="box box-info">
+                <div class="box-body">
+                    <div>
+                        <input type="hidden" id="Id" />
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label><span style="color: red;">*</span> Nome</label>
+                            <input type="text" class="form-control" id="txtNome" placeholder="Nome" maxlength="50">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> Sobrenome</label>
+                            <input type="text" class="form-control" id="txtSobrenome" placeholder="Sobrenome" maxlength="100">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> Nacionalidade</label>
+                            <input type="text" class="form-control" id="txtNacionalidade" placeholder="Nacionalidade" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label> CEP</label>
+                            <input type="text" class="form-control" id="txtCep" placeholder="Cep" maxlength="9">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label> Estado</label>
+                            <input type="text" class="form-control" id="txtEstado" placeholder="Estado" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label> Cidade</label>
+                            <input type="text" class="form-control" id="txtCidade" placeholder="Cidade" maxlength="100">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label> Logradouro</label>
+                            <input type="text" class="form-control" id="txtLogradouro" placeholder="Logradouro" maxlength="150">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> E-mail</label>
+                            <input type="email" class="form-control" id="txtEmail" placeholder="Email" maxlength="100">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> Telefone</label>
+                            <input type="text" class="form-control" id="txtTelefone" placeholder="Telefone" maxlength="13">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary  pull-right" id="btnSalvar" onclick="CadastrarPessoa(); Pesquisar();"> Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="row" id="Grid">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Lista de Pessoas</h3>
+                    </div>
+                    <div class="box-body">
+                        <table id="myDataTable" class="table table-bordered table-striped table-hover" style="width:100%;">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Sobrenome</th>
+                                    <th>Nacionalidade</th>
+                                    <th>CEP</th>
+                                    <th>Estado</th>
+                                    <th>Cidade</th>
+                                    <th>Logradouro</th>
+                                    <th>E-mail</th>
+                                    <th>Telefone</th>
+                                    <th>Opções</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/Scripts/Pessoa/Cadastrar.js"></script>
+    <script src="~/Scripts/Pessoa/Consultar.js"></script>
+    <script type="text/javascript" src="jquery.maskedinput.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</div>
